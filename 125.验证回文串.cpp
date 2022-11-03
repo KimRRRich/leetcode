@@ -61,8 +61,27 @@
 class Solution {
 public:
     bool isPalindrome(string s) {
-        if(s==" ") return true;
-        else return false;
+        int length=s.size();
+        int left=0;
+        int right=length-1;
+        while(left<right){
+           while(!isalnum(s[left])){
+            left+=1;
+            if(left>right) return true;
+           }
+           while(!isalnum(s[right])){
+            right-=1;
+            if(left>right) return true;
+           }
+           if(tolower(s[left])!=tolower(s[right])){
+            return false;
+           }else{
+            left++;
+            right--;
+           }
+
+        }
+        return true;
     }
 };
 // @lc code=end
