@@ -3,7 +3,8 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt"
             ],
             "defines": [
                 "_DEBUG",
@@ -15,7 +16,10 @@
             "compilerPath": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.33.31629/bin/Hostx64/x64/cl.exe",
             "cStandard": "c17",
             "cppStandard": "c++17",
-            "intelliSenseMode": "windows-msvc-x64"
+            "intelliSenseMode": "windows-msvc-x64",
+            "C_Cpp.intelliSenseEngineFallback": "Default", //需要添加的
+            "C_Cpp.intelliSenseEngine": "Tag Parser" //  需要添加的
+        
         }
     ],
     "version": 4

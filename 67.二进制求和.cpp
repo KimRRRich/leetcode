@@ -42,10 +42,39 @@
  */
 
 // @lc code=start
+
 class Solution {
 public:
     string addBinary(string a, string b) {
-
+        int Alength=a.size();
+        int Blength=b.size();
+        //int suma=0;
+        //int sumb=0;
+        int sum=0;
+        for(int i=0;i<Alength;i++){
+           if(a[i]=='1'){
+            sum+=pow(2,(Alength-i-1));
+           }
+        }
+        for(int i=0;i<Blength;i++){
+            if(b[i]=='1'){
+            sum+=pow(2,(Blength-i-1));
+            }
+        }
+        //sum=suma;
+        string result;
+        if(sum==0) return "0";
+        while(sum>0){
+            int x=sum%2;
+            sum=sum/2;
+            if(x==1){
+                result="1"+result;
+            }else{
+                result="0"+result;
+            }
+            
+        }
+        return result;
     }
 };
 // @lc code=end
