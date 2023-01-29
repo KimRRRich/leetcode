@@ -67,17 +67,17 @@ class Solution {
 public:
     string greatestLetter(string s) {
         string ans="";
-        unordered_map<int,int> smallletter;
-        unordered_map<int,int> bigletter;
+        unordered_map<char,int> letter;
+        //unordered_map<int,int> bigletter;
         for(int i=0;i<s.size();i++){
             if(s[i]>='a'&&s[i]<='z'){
-                smallletter[s[i]-'a']++;
-                if(smallletter[s[i]-'a']!=0&&bigletter[s[i]-'a']!=0){
+                letter[s[i]]++;
+                if(letter[s[i]]!=0&&letter[s[i]-32]!=0){
                     if(ans==""||s[i]-32>ans[0]) ans=s[i]-32;
                 }
             }else if(s[i]>='A'&&s[i]<='Z'){
-                bigletter[s[i]-'A']++;
-                if(smallletter[s[i]-'A']!=0&&bigletter[s[i]-'A']!=0){
+                letter[s[i]]++;
+                if(letter[s[i]]!=0&&letter[s[i]+32]!=0){
                     if(ans==""||s[i]>ans[0]) ans=s[i];
                 }
             }
