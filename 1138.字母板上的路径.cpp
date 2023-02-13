@@ -69,8 +69,6 @@ public:
         string ans;
         int currentX=0;
         int currentY=0;
-        int targetX;
-        int targerY;
         char lastTarget='a';
         for(int i=0;i<target.size();i++){
             int targetX=(target[i]-'a')/5;
