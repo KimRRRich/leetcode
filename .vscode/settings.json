@@ -1,6 +1,11 @@
 {
     "files.associations": {
         "unordered_map": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "vector": "cpp",
+        "map": "cpp",
+        "algorithm": "cpp",
+        "limits": "cpp",
+        "xtree": "cpp"
     }
 }

@@ -79,7 +79,7 @@ public:
                 //size-=2;
             }
         }
-        return {count, nums.size()-count*2};
+        return {count, int(nums.size())-count*2};
     }
 };
 // @lc code=end

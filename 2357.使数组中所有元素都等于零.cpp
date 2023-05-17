@@ -66,6 +66,7 @@ public:
         unordered_set<int> cnt;
         for (auto n : nums){
             if(n!=0)
+            
             cnt.insert(n);
         }
         return cnt.size();
